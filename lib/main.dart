@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:html' as html;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
+import 'blog.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
           backgroundColor: Color(0xFFF5A2E9),
-          onPressed: () => {},
+          onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => blog()),)},
           child: const Icon(Icons.note_alt_sharp),
         ),
         body: Container(
